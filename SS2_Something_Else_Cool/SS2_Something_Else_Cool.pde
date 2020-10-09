@@ -1,5 +1,7 @@
 // Something Else Cool by Jelani
 
+int circle= 500;
+
 
 void setup(){
   size (700,700);
@@ -17,6 +19,9 @@ void draw() {
   background(245, 204, 800);
   circle(60, 600, 60);
   rect(width/2, height/2, mouseX + 10, mouseY + 10);
+  if (circle< width + 100)
+  circle= +2;
+  else circle= - 100;
 }
 
 void keyPressed() {
@@ -25,5 +30,3 @@ void keyPressed() {
  rectMode(CENTER);
  rect(mouseX, mouseY, 16, 16);
 }
-
-// if the mouse in on the left side of the screen, draw a circle on the right side of the screen
