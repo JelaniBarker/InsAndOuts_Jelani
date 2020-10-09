@@ -17,5 +17,8 @@ void draw(){
     ellipse(20, 30, 30, i);
     ellipse(i, 30, 20, 200);
   }
-  
+    }
+   for (int i = 20; i < width; i+=30)
+  if (mouseX > i + move)
+  move=-move;
 }
