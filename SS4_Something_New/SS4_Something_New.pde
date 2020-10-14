@@ -2,6 +2,8 @@
 
 PImage Jelani;
 
+float move= 1.5;
+float rectX= 590;
 float opacity=0;
 float fade = 1;
 
@@ -16,13 +18,20 @@ textAlign(TOP, LEFT);
 
 void draw() {
   background(20, 75, 50);
-  image(Jelani, 0, 40);
+  image(Jelani, 0, 40);// character
   
-  fill(opacity);
+  fill(240, 75, 23);
   text ("BAD FEETS", 100, 100, 150);
   opacity= opacity+fade;
   if (opacity>255 || opacity< 0) {
     fade= -fade;
+
 }
 
+//ellipse(x, y, width, height);
+    rect (rectX, 590, 100, 100);
+    rectX-= move;
+   if (rectX > width - 100)
+     rectX=+589;
+       
 }
