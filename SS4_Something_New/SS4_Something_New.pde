@@ -30,8 +30,9 @@ void draw() {
 
 //ellipse(x, y, width, height);
     rect (rectX, 590, 100, 100);
+    if (rectX < -200){
+      rectX = width;
+    } else {
     rectX-= move;
-   if (rectX > width - 100)
-     rectX=+589;
-       
+    }
 }
